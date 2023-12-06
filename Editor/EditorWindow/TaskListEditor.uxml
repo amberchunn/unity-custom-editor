@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Red1chi%20Tools/unity-custom-tasklist/Editor/EditorWindow/TaskListEditor.uss?fileID=7433441132597879392&amp;guid=afe6a5751a58f4519bb7b740861dc40d&amp;type=3#TaskListEditor" />
+    <ui:VisualElement name="MainContainer" class="container main" style="flex-grow: 1; background-color: rgb(50, 50, 50);">
+        <ui:VisualElement name="NotificationContainer" style="flex-grow: 1; display: none;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NotificationText" />
+            <ui:Button text="X" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NotificationDismissBtn" style="flex-basis: auto; flex-grow: 1; flex-shrink: 1; overflow: visible; position: absolute; top: 0; right: 0; flex-direction: row; flex-wrap: wrap; justify-content: flex-end; align-items: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="SearchContainer" class="container" style="flex-grow: initial;">
+            <ui:Label tabindex="-1" text="SEARCH TASKS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SearchHeader" focusable="true" class="header" style="-unity-font-style: bold; font-size: 12px;" />
+            <uie:ToolbarSearchField focusable="true" name="SearchBox" style="flex-basis: auto; flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LoadingContainer" class="container" style="flex-grow: 1; flex-direction: column;">
+            <ui:Label tabindex="-1" text="LOAD TASK LIST" parse-escape-sequences="false" display-tooltip-when-elided="true" name="LoadExistingTasksHeader" class="header" style="-unity-font-style: bold; font-size: 12px; -unity-text-align: middle-left;" />
+            <uie:ObjectField name="FileObject" class="col-container" />
+            <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="FileLoadBtn" class="btn" />
+        </ui:VisualElement>
+        <ui:VisualElement name="AddTaskContainer" class="container">
+            <ui:Label tabindex="-1" text="ADD NEW TASK" parse-escape-sequences="false" display-tooltip-when-elided="true" name="AddTasksHeader" class="header" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 12px; -unity-text-align: middle-left;" />
+            <ui:TextField picking-mode="Ignore" label="Title" name="TaskText" style="align-self: auto; justify-content: flex-end; align-items: stretch; -unity-text-align: middle-center; white-space: normal; text-overflow: ellipsis;" />
+            <ui:Button text="Add" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AddTaskBtn" class="btn" />
+        </ui:VisualElement>
+        <ui:VisualElement name="TaskListContainer" class="container">
+            <ui:Label tabindex="-1" text="CURRENT TASKS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TaskListHeader" class="header sm subHeading" style="-unity-font-style: bold; justify-content: flex-start; align-items: auto; -unity-text-align: middle-left; white-space: nowrap; text-overflow: ellipsis;" />
+            <ui:ScrollView name="TaskList" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ProgressContainer" class="container">
+            <ui:Button text="Save Progress" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SaveProgressBtn" class="btn" />
+            <ui:ProgressBar value="0" name="TaskProgressBar" high-value="1" title="---%" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

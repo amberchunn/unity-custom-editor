@@ -1,0 +1,121 @@
+#MainContainer {
+  padding: 0 20px;
+  margin: 0 auto;
+  min-width: 250px;
+  max-width: 500px;
+  width:100%;
+  min-height: 475px;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  flex-shrink: 1;
+  flex-grow: 0;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  color: #FFF;
+  margin: 10px 0;
+}
+.header {
+    margin: 10px 0px;
+    padding: 0;
+    white-space: normal;
+}
+.subHeading {
+    margin: 15px 0px 10px 0px;
+    -unity-text-align: middle-left;
+    font-size: 12px;
+}
+.btn {
+  width: 100%;
+  background-color: #4d9a36;
+  color: #ededed;
+  padding: 5px 0px;
+  white-space: normal;
+  margin-top: 5px;
+  -unity-font-style: bold;
+}
+#NotificationContainer {
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #4d9a36;
+    color: #FFF;
+  -unity-font-style: bold;
+    font-size: 14px;
+    width: 100%;
+    flex-wrap: wrap;
+    white-space: normal;
+    padding: 10px;
+}
+#NotificationContainer #NotificationBtn {
+    max-width: 25px;
+    max-height: 25px;
+    color: #333;
+    border-width: 1px;
+    border-color: #333;
+}
+#NotificationContainer .hide {
+    display: none;
+}
+.col-container .unity-object-field__object {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#FileObject .unity-image {
+    max-width: 50px;
+    max-height: 75px;
+}
+#FileObject .unity-label {
+    max-width: 200px;
+    white-space: normal;
+}
+#TaskText {
+    display: flex;
+    flex-direction: row;
+    white-space: normal;
+}
+#TaskText .unity-base-field__label,
+#TaskText .unity-label {
+    display: none;
+}
+#TaskText .unity-base-text-field,
+#TaskText .unity-text-field,
+#TaskText .unity-base-field {
+    -unity-text-align: middle-center;
+    padding-right: 5px;
+    margin: 0;
+    white-space: normal;
+    max-width: 75px;
+    min-width: 50px;
+}
+#TaskText .unity-base-field__input {
+    width: 100%;
+    padding: 2px;
+    white-space: normal;
+}
+.unity-search-field-base {
+    max-width: 100%;
+    white-space: normal;
+    padding: 10px;
+    margin: 0;
+}
+#ProgressContainer #TaskProgressBar {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #4d9a36;
+}
+#ProgressContainer #TaskProgressBar .unity-progress-bar__progress {
+    background-color: #4d9a36;
+    color: #FFF;
+    -unity-font-style: bold;
+}
+.highlight {
+    background-color: #A4C165;
+    color: #333;
+}
